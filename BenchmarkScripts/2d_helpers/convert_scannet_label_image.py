@@ -18,7 +18,7 @@ import inspect
 try:
     import numpy as np
 except:
-    print "Failed to import numpy package."
+    print("Failed to import numpy package.")
     sys.exit(-1)
 try:
     import imageio
@@ -41,7 +41,7 @@ opt = parser.parse_args()
 
 def map_label_image(image, label_mapping):
     mapped = np.copy(image)
-    for k,v in label_mapping.iteritems():
+    for k,v in label_mapping.items():
         mapped[image==k] = v
     return mapped.astype(np.uint8)
 
